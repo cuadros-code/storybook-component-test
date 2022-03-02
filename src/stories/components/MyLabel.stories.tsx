@@ -12,5 +12,5 @@ const Template: ComponentStory<typeof MyLabel> = ( args ) => <MyLabel {...args} 
 export const Primary = Template.bind({});
 Primary.args = {
   label: 'Primary Label',
-  size: "h2"
+  size: "normal",
 }
