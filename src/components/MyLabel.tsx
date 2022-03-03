@@ -15,6 +15,11 @@ export interface MyLabelProps {
    * Label color hex code
    */
   color?: string
+
+  /**
+   * If true, label will be rendered in all caps
+   */
+  allCaps?: boolean
 }
 
 /**
@@ -23,14 +28,17 @@ export interface MyLabelProps {
 const MyLabel = ( props: MyLabelProps ) => {
 
   const {
-    label = 'Default label',
-    size  = 'normal',
-    color = 'black'
+    label   = 'Default label',
+    size    = 'normal',
+    color   = 'black',
+    allCaps = false
   } = props
 
   return (
     <span 
-      className={`${size}`}
+      className={
+        `${size} ${allCaps && 'uppercase'}`
+      }
       style={{ color }}
     >
       { label }
