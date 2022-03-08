@@ -20,6 +20,11 @@ export interface MyLabelProps {
    * If true, label will be rendered in all caps
    */
   allCaps?: boolean
+
+  /**
+   * background color hex code
+   */
+  backgroundColor?: string
 }
 
 /**
@@ -31,6 +36,7 @@ const MyLabel = ( props: MyLabelProps ) => {
     label   = 'Default label',
     size    = 'normal',
     color   = 'black',
+    backgroundColor = 'white',
     allCaps = false
   } = props
 
@@ -39,7 +45,7 @@ const MyLabel = ( props: MyLabelProps ) => {
       className={
         `${size} ${allCaps && 'uppercase'}`
       }
-      style={{ color }}
+      style={{ color, backgroundColor }}
     >
       { label }
     </span>
