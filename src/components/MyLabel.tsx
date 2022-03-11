@@ -30,7 +30,7 @@ export interface MyLabelProps {
 /**
  * Label component
  */
-const MyLabel = ( props: MyLabelProps ) => {
+export const MyLabel = ( props: MyLabelProps ) => {
 
   const {
     label   = 'Default label',
